@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DAssAdmin</class>
+ <widget class="QWidget" name="DAssAdmin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1105</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Data assessment</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="dassadmin_mod.qrc">
+    <normaloff>:/img/data_estimation.png</normaloff>:/img/data_estimation.png</iconset>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_5">
+   <item>
+    <widget class="QWidget" name="w_navigate" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,1">
+      <item>
+       <widget class="QWidget" name="w_da_not_active" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="dassadmin_mod.qrc">:/img/new_msg_err.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Functionaly woll be disabled until server DA not start</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="w_navi_not_work" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="dassadmin_mod.qrc">:/img/new_msg_war.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_not_work">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <italic>true</italic>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>No one element on control found</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="w_navi_work" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="l_ontology">
+             <property name="text">
+              <string>Ontology</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="OntologyComboBox" name="cmp_ontology"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="vl_credentials"/>
+         </item>
+         <item>
+          <widget class="OntologySearchWidget" name="w_ont_search" native="true"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="CheckSrvConnWidget" name="w_main" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="l_last_data">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Last assessment time&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="le_last_data">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="l_condition">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Condition assessment&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="le_condition">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="ckb_oe">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="l_oe">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Object evaluation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Evaluation Rules(view mode)</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="JLCEditor" name="script_edit"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QPushButton" name="pbtn_save_rule">
+             <property name="text">
+              <string>Seve rule</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pbtn_apply_script">
+             <property name="text">
+              <string>Apply rule</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pbtn_edit_script">
+          <property name="text">
+           <string>Edit rule</string>
+          </property>
+          <property name="icon">
+           <iconset resource="dassadmin_mod.qrc">
+            <normaloff>:/img/edit.png</normaloff>:/img/edit.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbtn_change_queue">
+          <property name="text">
+           <string>Сhange queue</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+  <action name="act_rm">
+   <property name="icon">
+    <iconset resource="dassadmin_mod.qrc">
+     <normaloff>:/img/delete.png</normaloff>:/img/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete item to be rated</string>
+   </property>
+  </action>
+  <action name="act_add">
+   <property name="icon">
+    <iconset resource="dassadmin_mod.qrc">
+     <normaloff>:/img/add.png</normaloff>:/img/add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add assessment object</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>JLCEditor</class>
+   <extends>QTextEdit</extends>
+   <header>JLCEditor.h</header>
+  </customwidget>
+  <customwidget>
+   <class>OntologyComboBox</class>
+   <extends>QComboBox</extends>
+   <header>../DAssAdmin.h</header>
+  </customwidget>
+  <customwidget>
+   <class>OntologySearchWidget</class>
+   <extends>QWidget</extends>
+   <header>/usr/local/include/nii-rubin/libds/utils/ont_search/OntologySearchWidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>needShowObject(QString)</signal>
+    <signal>needShowObjectData(QString)</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>CheckSrvConnWidget</class>
+   <extends>QWidget</extends>
+   <header>CheckSrvConnWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="dassadmin_mod.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pbtn_edit_script</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>DAssAdmin</receiver>
+   <slot>onClicked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>581</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbtn_change_queue</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>DAssAdmin</receiver>
+   <slot>onClicked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>581</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbtn_apply_script</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>DAssAdmin</receiver>
+   <slot>onClicked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>725</x>
+     <y>531</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbtn_save_rule</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>DAssAdmin</receiver>
+   <slot>onClicked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>486</x>
+     <y>383</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>act_rm</sender>
+   <signal>triggered()</signal>
+   <receiver>DAssAdmin</receiver>
+   <slot>onTrigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>act_add</sender>
+   <signal>triggered()</signal>
+   <receiver>DAssAdmin</receiver>
+   <slot>onTrigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>w_ont_search</sender>
+   <signal>needShowObject(QString)</signal>
+   <receiver>DAssAdmin</receiver>
+   <slot>onShowObject(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>w_ont_search</sender>
+   <signal>needShowObjectData(QString)</signal>
+   <receiver>DAssAdmin</receiver>
+   <slot>onShowObjectData(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onClicked(bool)</slot>
+  <slot>onTextEdited(QString)</slot>
+  <slot>onItemPressed(QTreeWidgetItem,int)</slot>
+  <slot>onTrigger()</slot>
+  <slot>onShowObjectData(QString)</slot>
+  <slot>onShowObject(QString)</slot>
+ </slots>
+</ui>
